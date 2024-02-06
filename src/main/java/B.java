@@ -4,9 +4,11 @@ import java.util.List;
 public class B {
     private final List<Integer> integers;
     public final Integer id;
+//    public final Integer id2;
     public B(){
         integers = new LinkedList<>();
         id = 0;
+//        id2 = 2;
     }
     public List<Integer> getIntegers() {
         return integers;
@@ -25,12 +27,18 @@ public class B {
         }
         return false;
     }
-    public boolean equals(B other){
+
+    @Override
+    public boolean equals(Object other){
         if (other==null){
             return false;
-        } else if(!this.id.equals(other.id)){
+        }
+        if (!(other instanceof B o)) {
             return false;
         }
-        return this.getIntegers().equals(other.getIntegers());
+        if(!this.id.equals(o.id)){
+            return false;
+        }
+        return this.getIntegers().equals(o.getIntegers());
     }
 }

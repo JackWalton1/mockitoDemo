@@ -11,7 +11,7 @@ class BTest {
         assertTrue(b.remove(9));
         assertEquals(0, b.getIntegers().size());
         B b2 = new B();
-        assertTrue(b.equals(b2));
+        assertEquals(b, b2);
     }
 
 }
