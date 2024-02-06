@@ -8,19 +8,23 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
-
-
 class ATest {
+    //mock creation
     B mockB = mock(B.class);
     @BeforeEach
     public void setUp(){
+//  Stubbing:
         when(mockB.getIntegers()).thenReturn(List.of(10, 20, 30));
-//  Seemingly very useful commands:
+//  Make mock object call the real method:
 //        when(mock.someMethod()).thenCallRealMethod();
+//  Throw exceptions:
 //        when(mockedList.get(1)).thenThrow(new RuntimeException());
 //        doThrow(new RuntimeException()).when(mockedList).get(1);
-//        reset(mockB);
+//  Flexible "argument matchers":
+//        when(mockedList.get(anyInt())).thenReturn("element"); anyBoolean(); isNull();
 
+//  Reset all rules up to this point:
+//        reset(mockB);
     }
 
     @Test

@@ -4,8 +4,6 @@ import java.util.List;
 public class A {
     private B b;
     private final List<Integer> integers;
-
-
     public final Integer id;
     public A(B b1){
         this.b = b1;

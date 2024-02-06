@@ -4,11 +4,10 @@ import java.util.List;
 public class B {
     private final List<Integer> integers;
     public final Integer id;
-//    public final Integer id2;
-    public B(){
+    public Integer id2;
+    public B(Integer id2){
         integers = new LinkedList<>();
         id = 0;
-//        id2 = 2;
     }
     public List<Integer> getIntegers() {
         return integers;

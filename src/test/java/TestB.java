@@ -4,13 +4,13 @@ import static org.junit.jupiter.api.Assertions.*;
 class BTest {
     @Test
     void testB() {
-        B b = new B();
+        B b = new B(1);
         assertEquals(0, b.getIntegers().size());
         b.add(9);
         assertFalse(b.remove(8));
         assertTrue(b.remove(9));
         assertEquals(0, b.getIntegers().size());
-        B b2 = new B();
+        B b2 = new B(1);
         assertEquals(b, b2);
     }
 
